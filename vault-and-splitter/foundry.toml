@@ -1,0 +1,19 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+cache_path = "cache"
+libs = []
+solc_version = "0.8.35"
+optimizer = true
+optimizer_runs = 200
+# Robinhood Chain is an Arbitrum Orbit chain; cancun is the newest set it is assumed to support (UNVERIFIED).
+evm_version = "cancun"
+
+[fuzz]
+runs = 1024
+
+[lint]
+# Immutables keep the repo's camelCase style (see cortex/contracts).
+exclude_lints = ["screaming-snake-case-immutable"]
